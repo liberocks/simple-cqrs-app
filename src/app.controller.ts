@@ -12,7 +12,7 @@ export class AppController {
   ) {}
 
   @Post('/order')
-  async bid(): Promise<object> {
+  async createOrder(): Promise<object> {
     const orderTransactionGUID = uuid.v4();
 
     this.eventBus.publish(
