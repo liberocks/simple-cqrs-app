@@ -19,9 +19,7 @@ export class OrderHandler implements ICommandHandler<OrderCommand> {
     } = command;
 
     // tslint:disable-next-line:no-console
-    console.log(
-      `Make a bid on ${orderItem}, with userID: ${orderUserGUID} amount: ${orderAmount}`
-    );
+    console.log(`Queueing ${orderTransactionGUID}`);
 
     // to associate model ( Order ) and publisher, we use code bellow
     const item = this.publisher.mergeObjectContext(
