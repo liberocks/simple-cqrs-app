@@ -11,7 +11,7 @@ export class AppController {
     private queryBus: QueryBus
   ) {}
 
-  @Post()
+  @Post('/order')
   async bid(): Promise<object> {
     const orderTransactionGUID = uuid.v4();
 
